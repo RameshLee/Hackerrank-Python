@@ -170,10 +170,33 @@ def listandtuples():
     end = 8
     list.index(element, start, end)
 
-def MathFunctions:
+def MathFunctions():
     divmod(177, 10) # finds tuple of quotient and remainder
     pow(2,3) # find a ^ b
     pow(2,3,4) # finds a^b mod m
+
+from itertools import permutations
+from itertools import combinations
+from itertools import combinations_with_replacement
+from itertools import product
+def IterationTools():
+    #a = [i+1 for i in range(3)]
+    a = list("1233")
+    comboLength = int(2)
+
+    b = list(permutations(sorted(a), comboLength)) # permutations
+    print(a, "Permutations =>", b)
+
+    b = list(combinations(sorted(a), comboLength)) # combinations
+    print(a, "Combinations =>", b)
+
+    b = list(combinations_with_replacement(sorted(a), comboLength))  # combinations with permission to repeat the individual elements
+    print(a, "Combinations_with_replacement =>", b)
+
+    #b = list(product(a), repeat=2))  # cartesian products (Matrix multiplication)
+    b = list(product([1, 2, 3], [4, 5, 6]))
+    print(a, "Cartesian products =>", b)
+
 
 def dictionary():
     dict = {}
@@ -693,6 +716,7 @@ if __name__ == '__main__':
     # listandtuples()
     # ExtractNumbers_from_String()
     # string()
-    set_function()
+    # set_function()
+    IterationTools()
 
 
